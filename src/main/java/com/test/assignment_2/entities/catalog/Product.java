@@ -1,7 +1,9 @@
 package com.test.assignment_2.entities.catalog;
-import com.hunghypebeast.ecommerce.domain.common.AuditableEntity;
+
 import java.math.BigDecimal;
 import java.util.UUID;
+
+import com.test.assignment_2.entities.common.AuditableEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,7 +19,7 @@ import lombok.*;
 public class Product extends AuditableEntity {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.UUID)
   @Column(name = "id", nullable = false)
   private UUID id;
 

@@ -19,7 +19,7 @@ import lombok.*;
 public class InventoryReservationItem {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
 
   @ManyToOne(fetch = FetchType.LAZY)

@@ -22,7 +22,7 @@ import lombok.*;
 public class ProductVariant extends AuditableEntity {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.UUID)
   @Column(name = "id", nullable = false)
   private UUID id;
 

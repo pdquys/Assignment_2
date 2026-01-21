@@ -24,7 +24,7 @@ import lombok.*;
 public class Order extends AuditableEntity {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
 
   @Column(name = "order_code", nullable = false, length = 32)

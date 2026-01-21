@@ -24,7 +24,7 @@ import lombok.*;
 public class InventoryReservation extends AuditableEntity {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
 
   @Column(name = "token", nullable = false)

@@ -1,9 +1,10 @@
 package com.test.assignment_2.entities.cart;
 
-import com.hunghypebeast.ecommerce.domain.common.AuditableEntity;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import com.test.assignment_2.entities.common.AuditableEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,7 +20,7 @@ import lombok.*;
 public class Cart extends AuditableEntity {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
 
   @Column(name = "token", nullable = false)

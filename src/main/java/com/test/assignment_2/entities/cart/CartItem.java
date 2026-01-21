@@ -1,7 +1,8 @@
 package com.test.assignment_2.entities.cart;
 
-import com.hunghypebeast.ecommerce.domain.catalog.ProductVariant;
 import java.util.UUID;
+
+import com.test.assignment_2.entities.catalog.ProductVariant;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,7 +18,7 @@ import lombok.*;
 public class CartItem {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
 
   @ManyToOne(fetch = FetchType.LAZY)
